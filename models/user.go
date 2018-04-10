@@ -39,6 +39,7 @@ func GetAllUsers() Response {
 	return GenerateSuccess("SUCCESS", users)
 }
 
+// 登录
 func Login(username, password string) Response {
 	user := User{Name: username, Password: password}
 	fmt.Println(user)

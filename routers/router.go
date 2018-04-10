@@ -13,7 +13,9 @@ func init() {
 				&controllers.UserController{},
 			),
 		),
+		// 文件
 		beego.NSRouter("/file", &controllers.FileController{}),
+		// 检查更新
 		beego.NSRouter("/update", &controllers.UpdateController{}),
 	)
 

@@ -10,6 +10,7 @@ type UpdateController struct {
 	beego.Controller
 }
 
+// 检查更新
 func (u *UpdateController) Get() {
 	filetype := u.GetString("filetype")
 

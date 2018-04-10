@@ -79,6 +79,7 @@ func (u *FileController) Post() {
 
 }
 
+// 文件列表
 func (u *FileController) Get() {
 	apkFiles := models.GetApkFiles()
 	binFiles := models.GetBinFiles()
@@ -102,6 +103,7 @@ func (u *FileController) Get() {
 	u.ServeJSON()
 }
 
+// 删除文件
 func (u *FileController) Delete() {
 	filetype := u.GetString("filetype")
 

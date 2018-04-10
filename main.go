@@ -22,6 +22,7 @@ func main() {
 	beego.SetStaticPath("/doc", "static/doc")
 	beego.InsertFilter("/", beego.BeforeRouter, TransparentStatic)
 	beego.InsertFilter("/*", beego.BeforeRouter, TransparentStatic)
+	//跨域
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 		AllowAllOrigins:  true,
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
